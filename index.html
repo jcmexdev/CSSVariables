@@ -25,7 +25,9 @@
 
       body {
         width: 100%;
+        min-width: 360px;
         min-height: 100vh;
+        padding: 16px;
         color: white;
         background-color: #202040;
         display: flex;
@@ -54,12 +56,38 @@
 
       .control label {
         margin-bottom: 16px;
+        color: var(--color);
       }
 
       img {
         padding: var(--spacing);
         filter: blur(var(--blur));
         background-color: var(--color);
+      }
+
+      @media screen and (max-width: 1024px) {
+        img {
+          width: 80%;
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        .controls {
+          width: 100%;
+          flex-wrap: wrap;
+          justify-content: space-between;
+        }
+        .control {
+          margin-bottom: 24px;
+        }
+
+        .control label {
+          margin-bottom: 8px;
+        }
+
+        img {
+          width: 100%;
+        }
       }
     </style>
   </head>
